@@ -1,0 +1,216 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "calculator.proto",
+    "version": "version not set"
+  },
+  "tags": [
+    {
+      "name": "Calculator"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/v1/calculator/add": {
+      "post": {
+        "operationId": "Calculator_Add",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/calculatorAddResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/calculatorAddRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Calculator"
+        ]
+      }
+    },
+    "/v1/calculator/divide": {
+      "post": {
+        "operationId": "Calculator_Divide",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/calculatorDivideResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/calculatorDivideRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Calculator"
+        ]
+      }
+    },
+    "/v1/calculator/multiply": {
+      "post": {
+        "operationId": "Calculator_Multiply",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/calculatorMultiplyResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/calculatorMultiplyRequest"
+            }
+          }
+        ],
+        "tags": [
+          "Calculator"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "calculatorAddRequest": {
+      "type": "object",
+      "properties": {
+        "operand1": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "operand2": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "calculatorAddResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "calculatorDivideRequest": {
+      "type": "object",
+      "properties": {
+        "dividend": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "divisor": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "calculatorDivideResponse": {
+      "type": "object",
+      "properties": {
+        "quotient": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "remainder": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "calculatorMultiplyRequest": {
+      "type": "object",
+      "properties": {
+        "factor1": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "factor2": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "calculatorMultiplyResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "protobufAny": {
+      "type": "object",
+      "properties": {
+        "@type": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": {}
+    },
+    "rpcStatus": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        },
+        "details": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/protobufAny"
+          }
+        }
+      }
+    }
+  }
+}

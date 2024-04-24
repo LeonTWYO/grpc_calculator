@@ -5,7 +5,6 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/LeonTWYO/grpc_calculator/gpb"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"
 	"google.golang.org/grpc"
 )

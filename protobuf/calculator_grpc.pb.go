@@ -4,7 +4,7 @@
 // - protoc             v5.26.1
 // source: calculator.proto
 
-package gpb
+package grpc_calculator
 
 import (
 	context "context"

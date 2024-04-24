@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package calculator;
+
+import "google/api/annotations.proto";
+
+option go_package = "github.com/LeonTWYO/grpc_calculator";
+
+service Calculator {
+  rpc Add (AddRequest) returns (AddResponse) {
+    option (google.api.http) = {
+      post: "/v1/calculator/add"
+      body: "*"
+    };
+  }
+  
+  rpc Multiply (MultiplyRequest) returns (MultiplyResponse) {
+    option (google.api.http) = {
+      post: "/v1/calculator/multiply"
+      body: "*"
+    };
+  }
+
+  rpc Divide (DivideRequest) returns (DivideResponse) {
+    option (google.api.http) = {
+      post: "/v1/calculator/divide"
+      body: "*"
+    };
+  }
+}
+
+message AddRequest {
+  int32 operand1 = 1;
+  int32 operand2 = 2;
+}
+
+message AddResponse {
+  int32 result = 1;
+}
+
+message MultiplyRequest {
+  int32 factor1 = 1;
+  int32 factor2 = 2;
+}
+
+message MultiplyResponse {
+  int32 result = 1;
+}
+
+message DivideRequest {
+  int32 dividend = 1;
+  int32 divisor = 2;
+}
+
+message DivideResponse {
+  int32 quotient = 1;
+  int32 remainder = 2;
+}
