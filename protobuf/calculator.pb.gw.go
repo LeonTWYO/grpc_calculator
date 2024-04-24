@@ -2,11 +2,11 @@
 // source: calculator.proto
 
 /*
-Package grpc_calculator is a reverse proxy.
+Package protobuf is a reverse proxy.
 
 It translates gRPC into RESTful JSON APIs.
 */
-package grpc_calculator
+package protobuf
 
 import (
 	"context"

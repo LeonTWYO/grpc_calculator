@@ -4,7 +4,7 @@ package calculator;
 
 import "google/api/annotations.proto";
 
-option go_package = "github.com/LeonTWYO/grpc_calculator";
+option go_package = "github.com/LeonTWYO/grpc_calculator/protobuf";
 
 service Calculator {
   rpc Add (AddRequest) returns (AddResponse) {
