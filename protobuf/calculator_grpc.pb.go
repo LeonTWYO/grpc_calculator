@@ -19,9 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Calculator_Add_FullMethodName      = "/calculator.Calculator/Add"
-	Calculator_Multiply_FullMethodName = "/calculator.Calculator/Multiply"
-	Calculator_Divide_FullMethodName   = "/calculator.Calculator/Divide"
+	Calculator_Add_FullMethodName      = "/grpc_calculator.protobuf.Calculator/Add"
+	Calculator_Multiply_FullMethodName = "/grpc_calculator.protobuf.Calculator/Multiply"
+	Calculator_Divide_FullMethodName   = "/grpc_calculator.protobuf.Calculator/Divide"
 )
 
 // CalculatorClient is the client API for Calculator service.
@@ -162,7 +162,7 @@ func _Calculator_Divide_Handler(srv interface{}, ctx context.Context, dec func(i
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Calculator_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "calculator.Calculator",
+	ServiceName: "grpc_calculator.protobuf.Calculator",
 	HandlerType: (*CalculatorServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

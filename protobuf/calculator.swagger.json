@@ -23,7 +23,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/calculatorAddResponse"
+              "$ref": "#/definitions/protobufAddResponse"
             }
           },
           "default": {
@@ -39,7 +39,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/calculatorAddRequest"
+              "$ref": "#/definitions/protobufAddRequest"
             }
           }
         ],
@@ -55,7 +55,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/calculatorDivideResponse"
+              "$ref": "#/definitions/protobufDivideResponse"
             }
           },
           "default": {
@@ -71,7 +71,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/calculatorDivideRequest"
+              "$ref": "#/definitions/protobufDivideRequest"
             }
           }
         ],
@@ -87,7 +87,7 @@
           "200": {
             "description": "A successful response.",
             "schema": {
-              "$ref": "#/definitions/calculatorMultiplyResponse"
+              "$ref": "#/definitions/protobufMultiplyResponse"
             }
           },
           "default": {
@@ -103,7 +103,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/calculatorMultiplyRequest"
+              "$ref": "#/definitions/protobufMultiplyRequest"
             }
           }
         ],
@@ -114,7 +114,7 @@
     }
   },
   "definitions": {
-    "calculatorAddRequest": {
+    "protobufAddRequest": {
       "type": "object",
       "properties": {
         "operand1": {
@@ -127,55 +127,7 @@
         }
       }
     },
-    "calculatorAddResponse": {
-      "type": "object",
-      "properties": {
-        "result": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "calculatorDivideRequest": {
-      "type": "object",
-      "properties": {
-        "dividend": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "divisor": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "calculatorDivideResponse": {
-      "type": "object",
-      "properties": {
-        "quotient": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "remainder": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "calculatorMultiplyRequest": {
-      "type": "object",
-      "properties": {
-        "factor1": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "factor2": {
-          "type": "integer",
-          "format": "int32"
-        }
-      }
-    },
-    "calculatorMultiplyResponse": {
+    "protobufAddResponse": {
       "type": "object",
       "properties": {
         "result": {
@@ -192,6 +144,54 @@
         }
       },
       "additionalProperties": {}
+    },
+    "protobufDivideRequest": {
+      "type": "object",
+      "properties": {
+        "dividend": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "divisor": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "protobufDivideResponse": {
+      "type": "object",
+      "properties": {
+        "quotient": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "remainder": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "protobufMultiplyRequest": {
+      "type": "object",
+      "properties": {
+        "factor1": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "factor2": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
+    },
+    "protobufMultiplyResponse": {
+      "type": "object",
+      "properties": {
+        "result": {
+          "type": "integer",
+          "format": "int32"
+        }
+      }
     },
     "rpcStatus": {
       "type": "object",

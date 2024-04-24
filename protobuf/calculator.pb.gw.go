@@ -123,7 +123,7 @@ func RegisterCalculatorHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/calculator.Calculator/Add", runtime.WithHTTPPathPattern("/v1/calculator/add"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc_calculator.protobuf.Calculator/Add", runtime.WithHTTPPathPattern("/v1/calculator/add"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -148,7 +148,7 @@ func RegisterCalculatorHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/calculator.Calculator/Multiply", runtime.WithHTTPPathPattern("/v1/calculator/multiply"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc_calculator.protobuf.Calculator/Multiply", runtime.WithHTTPPathPattern("/v1/calculator/multiply"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -173,7 +173,7 @@ func RegisterCalculatorHandlerServer(ctx context.Context, mux *runtime.ServeMux,
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/calculator.Calculator/Divide", runtime.WithHTTPPathPattern("/v1/calculator/divide"))
+		annotatedContext, err = runtime.AnnotateIncomingContext(ctx, mux, req, "/grpc_calculator.protobuf.Calculator/Divide", runtime.WithHTTPPathPattern("/v1/calculator/divide"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -237,7 +237,7 @@ func RegisterCalculatorHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/calculator.Calculator/Add", runtime.WithHTTPPathPattern("/v1/calculator/add"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/grpc_calculator.protobuf.Calculator/Add", runtime.WithHTTPPathPattern("/v1/calculator/add"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -259,7 +259,7 @@ func RegisterCalculatorHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/calculator.Calculator/Multiply", runtime.WithHTTPPathPattern("/v1/calculator/multiply"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/grpc_calculator.protobuf.Calculator/Multiply", runtime.WithHTTPPathPattern("/v1/calculator/multiply"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
@@ -281,7 +281,7 @@ func RegisterCalculatorHandlerClient(ctx context.Context, mux *runtime.ServeMux,
 		inboundMarshaler, outboundMarshaler := runtime.MarshalerForRequest(mux, req)
 		var err error
 		var annotatedContext context.Context
-		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/calculator.Calculator/Divide", runtime.WithHTTPPathPattern("/v1/calculator/divide"))
+		annotatedContext, err = runtime.AnnotateContext(ctx, mux, req, "/grpc_calculator.protobuf.Calculator/Divide", runtime.WithHTTPPathPattern("/v1/calculator/divide"))
 		if err != nil {
 			runtime.HTTPError(ctx, mux, outboundMarshaler, w, req, err)
 			return
